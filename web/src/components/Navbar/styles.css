@@ -9,26 +9,39 @@
     color: var(--primary-color);
 }
 
-/* MENU BUTTONS ANIMATIONS */
-.MuiListItem-root, .MuiListItem-root *{
-    transition: all .5s ease;
+/*--------------MENU BUTTONS ANIMATIONS----------------*/
+@media (hover: hover){
+    .MuiListItem-root, .MuiListItem-root *{
+        transition: padding-left .5s ease,
+                    margin-left .5s ease;
+    }
+    .MuiListItem-root:hover {
+        background-color: var(--primary-color);
+        margin-left: 6%;
+    }
+    .MuiListItem-root:hover *{
+        padding-left: 2%;
+    }
+    .MuiListItem-root:hover .MuiListItemIcon-root{
+        color: var(--text-color);
+    }
 }
-.MuiListItem-root:hover {
-    background-color: var(--primary-color);
-    opacity: 0.7;
+@media (hover: none) {
+    .MuiListItem-root:active{
+        transform: scale(0.96);
+    }
 }
-.MuiListItem-root:hover *{
-    padding-left: 5%;
-}
+/*-----------------------------------------------------*/
 
+.avatarbox {
+    background: var(--bg2-color);
+    width: 250px;
+    overflow: hidden;
+    height: 100%;
+}
 .MuiAvatar-root{
     display: block;
     margin: 0.5rem auto;
     width: 104px;
     height: 104px;
-}
-.avatarbox {
-    background: var(--bg2-color);
-    width: 250px;
-    height: 30rem;
 }
