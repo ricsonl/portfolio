@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
 
 import './styles.css';
-import { StylesProvider } from "@material-ui/core/styles";
+import { StylesProvider } from '@material-ui/core/styles';
 
-import { AppBar, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, List, Typography, Box, ListItemIcon } from "@material-ui/core";
-import { ArrowBack, AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
+import { AppBar, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, List, Typography, Box, ListItemIcon } from '@material-ui/core';
+import { ArrowBack, AssignmentInd, Home, Apps, ContactMail } from '@material-ui/icons';
 
 import avatar from '../../assets/pp.png';
 
