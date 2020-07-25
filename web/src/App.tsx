@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import Header from './Header';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+//import { Route } from 'react-router';
 
-function App() {
+const App = () => {
   return (
-     <div>
-       <Header title="test" />
-     </div>
+    <>
+      <Home />
+    </>
   );
 }
 

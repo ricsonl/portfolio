@@ -1,0 +1,34 @@
+.MuiAppBar-root{
+    background: var(--bg2-color);
+}
+
+.MuiIconButton-root{
+    color: var(--secondary-color);
+}
+.MuiListItemIcon-root{
+    color: var(--primary-color);
+}
+
+/* MENU BUTTONS ANIMATIONS */
+.MuiListItem-root, .MuiListItem-root *{
+    transition: all .5s ease;
+}
+.MuiListItem-root:hover {
+    background-color: var(--primary-color);
+    opacity: 0.7;
+}
+.MuiListItem-root:hover *{
+    padding-left: 5%;
+}
+
+.MuiAvatar-root{
+    display: block;
+    margin: 0.5rem auto;
+    width: 104px;
+    height: 104px;
+}
+.avatarbox {
+    background: var(--bg2-color);
+    width: 250px;
+    height: 30rem;
+}

@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #52489C;
+    --secondary-color: #ED217C;
+    --title-color: #ffffff;
+    --text-color: #b0b0b0;
+    --bg1-color: #131515;
+    --bg2-color: #2B2C28;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg1-color);
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color);
+}
+
+body, input, button {
+  font-family: Maven Pro, Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .MuiTypography-root {
+  color: var(--title-color);
+  font-family: Maven Pro, Arial, Helvetica, sans-serif;
+}
