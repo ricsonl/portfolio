@@ -43,13 +43,14 @@ nav{
 .nav-links{
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
     min-height: 8vh;
 }
 .nav-links li{
     display: flex;
     align-items: center;
     list-style: none;
+    margin: 0 auto;
 }
 .nav-links a{
     display: flex;
@@ -64,16 +65,16 @@ nav{
     font-size: 14px;
 }
 .nav-links i{
-    color: var(--blue1);
+    color: var(--blue2);
     font-size: 18px;
 }
 
 .more{
-    background: transparent;
     border: 0;
     display: none;
     color: var(--white);
     cursor: pointer;
+    font-size: 25px;
 }
 
 @media (hover: hover){
@@ -81,8 +82,7 @@ nav{
         transition: transform .05s ease-out;
     }
     .nav-links a:hover{
-        color: var(--blue2);
-        background-color: var(--blue2);
+        color: var(--blue1);
     }
     .nav-links a:hover i{
         transform: translateY(-5px);
@@ -93,7 +93,7 @@ nav{
         transition: transform .05s ease-out;
     }
     .nav-links a:active{
-        color: var(--blue2);
+        color: var(--blue1);
     }
     .nav-links a:active i{
         transform: translateY(-5px);
@@ -102,13 +102,16 @@ nav{
 
 @media screen and (max-width:1024px){
     .nav-links{
-        width: 50%;
+        width: 60%;
     }
 }
 
 @media screen and (max-width:768px){
     body{
         overflow-x: hidden;
+    }
+    nav{
+        justify-content: center;
     }
     .nav-links{
         position: absolute;
@@ -125,7 +128,10 @@ nav{
         transition: transform .3s ease-out;
     }
     .nav-links li{
-        width: 45%;
+        width: 50%;
+    }
+    .nav-links i{
+        font-size: 22px;
     }
     .nav-links a{
         width: 100%;
@@ -137,17 +143,25 @@ nav{
         color: var(--white);
         letter-spacing: 3px;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 16px;
+    }
+    .more i{
+        transition: transform .3s ease;
     }
     .nav-active{
         transform: translateX(0%);
     }
+    .nav-active ~ div i{
+        transform: rotateZ(180deg);
+    }
     .more{
         display: block;
+        position: absolute;
+        right: 10%;
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:650px){
     .nav-links li{
         width: 60%;
     }

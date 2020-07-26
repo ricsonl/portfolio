@@ -45,7 +45,7 @@ const Navbar = () => {
                 </li>
             </ul>
             <div className="more" onClick={() => toggleNav()} >
-                <i className="fas fa-bars"></i>
+                <i className="fas fa-arrow-left"></i>
             </div>
         </nav>
     )
