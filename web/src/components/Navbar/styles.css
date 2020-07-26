@@ -1,15 +1,4 @@
-.MuiAppBar-root{
-    background: var(--bg2-color);
-}
-
-.MuiIconButton-root{
-    color: var(--secondary-color);
-}
-.MuiListItemIcon-root{
-    color: var(--primary-color);
-}
-
-/*--------------MENU BUTTONS ANIMATIONS----------------*/
+/*--------------MENU BUTTONS ANIMATIONS----------------
 @media (hover: hover){
     .MuiListItem-root, .MuiListItem-root *{
         transition: padding-left .5s ease,
@@ -28,20 +17,79 @@
 }
 @media (hover: none) {
     .MuiListItem-root:active{
+        background-color: var(--primary-color);
         transform: scale(0.96);
     }
+    .MuiListItem-root:active .MuiListItemIcon-root{
+        color: var(--text-color);
+    }
 }
-/*-----------------------------------------------------*/
+-----------------------------------------------------*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--black);
+}
 
-.avatarbox {
-    background: var(--bg2-color);
-    width: 250px;
-    overflow: hidden;
-    height: 100%;
+.logo{
+    color: var(--blue2);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
 }
-.MuiAvatar-root{
-    display: block;
-    margin: 0.5rem auto;
-    width: 104px;
-    height: 104px;
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--white);
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.more{
+    background: transparent;
+    border: 0;
+    display: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        top: 8vh;
+        height: 92vh;
+        width: 50%;
+        background-color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform .3s ease-out;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+    .more{
+        display: block;
+    }
 }

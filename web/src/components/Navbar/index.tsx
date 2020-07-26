@@ -1,84 +1,43 @@
 import React, { useState } from 'react';
-import MobilRightMenuSlider from '@material-ui/core/Drawer';
-
 import './styles.css';
-import { StylesProvider } from '@material-ui/core/styles';
-
-import { AppBar, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, List, Typography, Box, ListItemIcon } from '@material-ui/core';
-import { ArrowBack, AssignmentInd, Home, Apps, ContactMail } from '@material-ui/icons';
 
 import avatar from '../../assets/pp.png';
 
-const menuItems = [
-    {
-        itemIcon: <Home/>,
-        itemText: "Home"
-    },
-    {
-        itemIcon: <AssignmentInd/>,
-        itemText: "Resume"
-    },
-    {
-        itemIcon: <Apps/>,
-        itemText: "Projects"
-    },
-    {
-        itemIcon: <ContactMail/>,
-        itemText: "Contact"
-    },
-];
-
 const Navbar = () => {
-    const [state, setState] = useState({
-        right: false
-    });
 
-    const toggleSlider = (slider, open) => () => {
-        setState({ ...state, [slider]: open });
-    }
+    const [nav, setNav] = useState(false); 
 
-    const sideList = slider => (
-        <Box component="div" 
-             className="avatarbox"
-             onClick={toggleSlider(slider, false)}
-             >
-            <Avatar src={avatar} alt="Ricson" />
-            <Divider />
-            <List>
-                {menuItems.map((item, key) => {
-                    return (
-                        <ListItem button key={key}>
-                            <ListItemIcon>
-                                {item.itemIcon}
-                            </ListItemIcon>
-                            <ListItemText primary={item.itemText} />
-                        </ListItem>
-                    );
-                })}
-            </List>
-        </Box>
-    );
+    const toggleNav = () => {
+        const navlinks = document.querySelector('.nav-links');
+        setNav(!nav);
+        if(navlinks){
+            navlinks.classList.toggle('nav-active');
+        }
+    };
 
     return (
-        <StylesProvider injectFirst>
-
-            <Box component="nav">
-                <AppBar position="static">
-                    <Toolbar>
-                        <IconButton onClick={toggleSlider("right", true)}>
-                            <ArrowBack />
-                        </IconButton>
-                        <Typography variant="h5">
-                            Projects
-                        </Typography>
-                        <MobilRightMenuSlider open={state.right} 
-                                              onClose={toggleSlider("right", false)}>
-                            { sideList("right") }
-                        </MobilRightMenuSlider>
-                    </Toolbar>
-                </AppBar>
-            </Box>
-        </StylesProvider>
+        <nav>
+            <div className="logo">
+                <h4>Ric</h4>
+            </div>
+            <ul className="nav-links">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Resume</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <a className="more" onClick={() => toggleNav()} >
+                <i className="fas fa-bars"></i>
+            </a>
+        </nav>
     )
 }
 
