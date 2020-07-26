@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-import avatar from '../../assets/pp.png';
-
 const Navbar = () => {
 
     const [nav, setNav] = useState(false); 
@@ -22,21 +20,33 @@ const Navbar = () => {
             </div>
             <ul className="nav-links">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#">
+                        <i className="fas fa-home"></i>
+                        Home
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Resume</a>
+                    <a href="#">
+                        <i className="fas fa-id-card-alt"></i>
+                        Resume
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Projects</a>
+                    <a href="#">
+                        <i className="fas fa-th"></i>
+                        Projects
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">
+                        <i className="fas fa-comment-alt"></i>
+                        Contact
+                    </a>
                 </li>
             </ul>
-            <a className="more" onClick={() => toggleNav()} >
+            <div className="more" onClick={() => toggleNav()} >
                 <i className="fas fa-bars"></i>
-            </a>
+            </div>
         </nav>
     )
 }
