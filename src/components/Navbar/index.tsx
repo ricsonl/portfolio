@@ -16,6 +16,11 @@ const Navbar = () => {
         }
     };
 
+    const openLink = (url) => {
+        var win = window.open(url, '_blank');
+        if(win){ win.focus(); }
+    }
+
     return (
         <nav>
             <div className="logo">
@@ -61,17 +66,17 @@ const Navbar = () => {
                 <li>
                     <ul className="social-links">
                         <li>
-                            <button onClick={() => { document.location.href ='https://github.com/ricsonl';}}>
+                            <button onClick={ () => openLink('https://github.com/ricsonl') }>
                                 <i className="fab fa-github"></i>
                             </button>
                         </li>
                         <li>
-                            <button onClick={() => { document.location.href = 'https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/'; }}>
+                            <button onClick={ () => openLink('https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/') }>
                                 <i className="fab fa-linkedin-in"></i>
                             </button>
                         </li>
                         <li>
-                            <button onClick={() => { document.location.href = 'https://www.hackerrank.com/ricsonl'; }}>
+                            <button onClick={() => openLink('https://www.hackerrank.com/ricsonl')}>
                                 <i className="fab fa-hackerrank"></i>
                             </button>
                         </li>
