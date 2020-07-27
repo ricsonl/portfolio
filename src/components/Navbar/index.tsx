@@ -3,12 +3,12 @@ import './styles.css';
 
 const Navbar = () => {
 
-    const [nav, setNav] = useState(false); 
+    const [nav, setNav] = useState(false);
 
     const toggleNav = () => {
         const navlinks = document.querySelector('.nav-links');
         setNav(!nav);
-        if(navlinks){
+        if (navlinks) {
             navlinks.classList.toggle('nav-active');
         }
     };
@@ -16,32 +16,32 @@ const Navbar = () => {
     return (
         <nav>
             <div className="logo">
-                <h4>Ric</h4>
+                <h4>ricson</h4>
             </div>
             <ul className="nav-links">
                 <li>
                     <a href="#">
                         <i className="fas fa-home"></i>
                         Home
-                </a>
+                    </a>
                 </li>
                 <li>
                     <a href="#">
                         <i className="fas fa-id-card-alt"></i>
                         Resume
-                </a>
+                    </a>
                 </li>
                 <li>
                     <a href="#">
                         <i className="fas fa-th"></i>
                         Projects
-                </a>
+                    </a>
                 </li>
                 <li>
                     <a href="#">
                         <i className="fas fa-comment-alt"></i>
                         Contact
-                </a>
+                    </a>
                 </li>
             </ul>
             <div className="more" onClick={() => toggleNav()} >
