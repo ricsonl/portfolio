@@ -5,11 +5,14 @@ const Navbar = () => {
 
     const [nav, setNav] = useState(false);
 
-    const toggleNav = () => {
+    const toggleNav = (arrow) => {
         const navlinks = document.querySelector('.nav-links');
         setNav(!nav);
         if (navlinks) {
-            navlinks.classList.toggle('nav-active');
+            if(!arrow){
+                if (navlinks.classList.contains('nav-active'))
+                    navlinks.classList.toggle('nav-active');
+            } else { navlinks.classList.toggle('nav-active'); }
         }
     };
 
@@ -20,7 +23,7 @@ const Navbar = () => {
             </div>
             <ul className="nav-links">
                 <li>
-                    <button>
+                    <button onClick={() => toggleNav(false)}>
                         <div>
                             <i className="fas fa-home"></i>
                             <p>Home</p>
@@ -29,37 +32,59 @@ const Navbar = () => {
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button>
+                    <button onClick={() => toggleNav(false)}>
                         <div>
-                            <i className="fas fa-id-card-alt"></i>
+                            <i className="far fa-user"></i>
                             <p>Resume</p>
                         </div>
                     </button>
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button>
+                    <button onClick={() => toggleNav(false)}>
                         <div>
-                            <i className="fas fa-th"></i>
+                            <i className="fas fa-cube"></i>
                             <p>Projects</p>
                         </div>
                     </button>
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button>
+                    <button onClick={() => toggleNav(false)}>
                         <div>
-                            <i className="fas fa-comment-alt"></i>
+                            <i className="far fa-comment-alt"></i>
                             <p>Contact</p>
                         </div>
                     </button>
                     <div className="border"></div>
                 </li>
+                <li>
+                    <ul className="social-links">
+                        <li>
+                            <button onClick={() => { document.location.href ='https://github.com/ricsonl';}}>
+                                <i className="fab fa-github"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button onClick={() => { document.location.href = 'https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/'; }}>
+                                <i className="fab fa-linkedin-in"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button onClick={() => { document.location.href = 'https://www.hackerrank.com/ricsonl'; }}>
+                                <i className="fab fa-hackerrank"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+                
             </ul>
-            <div className="more" onClick={() => toggleNav()} >
+
+            <div className="more" onClick={() => toggleNav(true)} >
                 <i className="fas fa-arrow-left"></i>
             </div>
-            <div className="cover" onClick={() => toggleNav()}></div>
+
+            <div className="cover" onClick={() => toggleNav(false)}></div>
         </nav>
     )
 }
