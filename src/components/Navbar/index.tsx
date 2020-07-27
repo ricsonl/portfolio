@@ -20,28 +20,40 @@ const Navbar = () => {
             </div>
             <ul className="nav-links">
                 <li>
-                    <a href="#">
-                        <i className="fas fa-home"></i>
-                        Home
-                    </a>
+                    <button>
+                        <div>
+                            <i className="fas fa-home"></i>
+                            <p>Home</p>
+                        </div>
+                    </button>
+                    <div className="border"></div>
                 </li>
                 <li>
-                    <a href="#">
-                        <i className="fas fa-id-card-alt"></i>
-                        Resume
-                    </a>
+                    <button>
+                        <div>
+                            <i className="fas fa-id-card-alt"></i>
+                            <p>Resume</p>
+                        </div>
+                    </button>
+                    <div className="border"></div>
                 </li>
                 <li>
-                    <a href="#">
-                        <i className="fas fa-th"></i>
-                        Projects
-                    </a>
+                    <button>
+                        <div>
+                            <i className="fas fa-th"></i>
+                            <p>Projects</p>
+                        </div>
+                    </button>
+                    <div className="border"></div>
                 </li>
                 <li>
-                    <a href="#">
-                        <i className="fas fa-comment-alt"></i>
-                        Contact
-                    </a>
+                    <button>
+                        <div>
+                            <i className="fas fa-comment-alt"></i>
+                            <p>Contact</p>
+                        </div>
+                    </button>
+                    <div className="border"></div>
                 </li>
             </ul>
             <div className="more" onClick={() => toggleNav()} >
