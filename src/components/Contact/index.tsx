@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.css';
 
-const Home = () => {
+const Contact = () => {
     return (
-        <h1>Home</h1>
+        <h1>Contact</h1>
     )
 }
 
-export default Home;
+export default Contact;

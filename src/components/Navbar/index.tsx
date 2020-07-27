@@ -16,10 +16,15 @@ const Navbar = () => {
         }
     };
 
-    const openLink = (url) => {
+    const goTo = (url) => {
+        document.location.href = url;
+        toggleNav(false);
+    };
+
+    const newTab = (url) => {
         var win = window.open(url, '_blank');
         if(win){ win.focus(); }
-    }
+    };
 
     return (
         <nav>
@@ -28,7 +33,7 @@ const Navbar = () => {
             </div>
             <ul className="nav-links">
                 <li>
-                    <button onClick={() => toggleNav(false)}>
+                    <button onClick={() => goTo('/')}>
                         <div>
                             <i className="fas fa-home"></i>
                             <p>Home</p>
@@ -37,7 +42,7 @@ const Navbar = () => {
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button onClick={() => toggleNav(false)}>
+                    <button onClick={() => goTo('/resume')}>
                         <div>
                             <i className="far fa-user"></i>
                             <p>Resume</p>
@@ -46,7 +51,7 @@ const Navbar = () => {
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button onClick={() => toggleNav(false)}>
+                    <button onClick={() => goTo('/projects')}>
                         <div>
                             <i className="fas fa-cube"></i>
                             <p>Projects</p>
@@ -55,7 +60,7 @@ const Navbar = () => {
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button onClick={() => toggleNav(false)}>
+                    <button onClick={() => goTo('/contact')}>
                         <div>
                             <i className="far fa-comment-alt"></i>
                             <p>Contact</p>
@@ -66,17 +71,17 @@ const Navbar = () => {
                 <li>
                     <ul className="social-links">
                         <li>
-                            <button onClick={ () => openLink('https://github.com/ricsonl') }>
+                            <button onClick={ () => newTab('https://github.com/ricsonl') }>
                                 <i className="fab fa-github"></i>
                             </button>
                         </li>
                         <li>
-                            <button onClick={ () => openLink('https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/') }>
+                            <button onClick={ () => newTab('https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/') }>
                                 <i className="fab fa-linkedin-in"></i>
                             </button>
                         </li>
                         <li>
-                            <button onClick={() => openLink('https://www.hackerrank.com/ricsonl')}>
+                            <button onClick={() => newTab('https://www.hackerrank.com/ricsonl')}>
                                 <i className="fab fa-hackerrank"></i>
                             </button>
                         </li>
