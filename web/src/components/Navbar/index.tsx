@@ -23,30 +23,31 @@ const Navbar = () => {
                     <a href="#">
                         <i className="fas fa-home"></i>
                         Home
-                    </a>
+                </a>
                 </li>
                 <li>
                     <a href="#">
                         <i className="fas fa-id-card-alt"></i>
                         Resume
-                    </a>
+                </a>
                 </li>
                 <li>
                     <a href="#">
                         <i className="fas fa-th"></i>
                         Projects
-                    </a>
+                </a>
                 </li>
                 <li>
                     <a href="#">
                         <i className="fas fa-comment-alt"></i>
                         Contact
-                    </a>
+                </a>
                 </li>
             </ul>
             <div className="more" onClick={() => toggleNav()} >
                 <i className="fas fa-arrow-left"></i>
             </div>
+            <div className="cover" onClick={() => toggleNav()}></div>
         </nav>
     )
 }
