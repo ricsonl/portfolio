@@ -6,24 +6,24 @@
     height: 100%;
     cursor: pointer;
 }
-.nb-div{
+.nb > div{
     display: flex;
     flex-direction: column;
     height: 40%;
     justify-content: space-between;
 }
-.nb-i{
+.nb > div > i{
     font-size: 17px;
     color: var(--blue);
     transition: transform .2s ease-out;
 }
-.nb-p{
+.nb > div > p{
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 1.5px;
     transition: letter-spacing .2s ease-out;
 }
-.nb-border{
+.border{
     position: absolute;
     border-bottom: 2px solid var(--purple);
     width: 0%;
@@ -34,14 +34,58 @@
         background-color: var(--grey);
         box-shadow: inset 0 0 15px 1px var(--black);
     }
-    .nb:hover .nb-i{
+    .nb:hover > div > i{
         transform: scale(1.15);
-        color: var(--blue);
     }
-    .nb:hover .nb-p{
+    .nb:hover > div > p{
         letter-spacing: 3px;
     }
-    .nb:hover ~ .nb-border{
+    .nb:hover ~ .border{
         width: 100%;
+    }
+}
+@media (hover:none){
+    .nb:active{
+        background-color: var(--grey);
+        box-shadow: inset 0 0 15px 1px var(--black);
+    }
+    .nb:active > div > i{
+        transform: scale(.85);
+    }
+    .nb:active ~ .border{
+        transition: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .nb > div{
+        flex-direction: row-reverse;
+        margin: 0 auto;
+        width: 45%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nb > div > i{
+        font-size: 23px;
+    }
+
+    .nb > div > p{
+        font-size: 17px;
+    }
+    
+    @media (hover:hover){
+        .nb:hover ~ .border{
+            width: 100vh;
+        }
+        .nb:hover > div > p{
+            letter-spacing: 4px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px){
+    .nb > div{
+        width: 70%;
     }
 }

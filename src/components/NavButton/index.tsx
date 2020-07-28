@@ -4,13 +4,13 @@ import './styles.css';
 const NavButton = (props: any) => {
     return (
         <>
-            <button className="nb">
-                <div className="nb-div">
-                    <i className={`nb-i ${props.icon}`}></i>
-                    <p className="nb-p">{props.text}</p>
+            <button className="nb" onClick={() => {}}>
+                <div>
+                    <i className={props.icon}></i>
+                    <p>{props.text}</p>
                 </div>
             </button>
-            <div className="nb-border"></div>
+            <div className="border"></div>
         </>
     )
 }

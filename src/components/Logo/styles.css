@@ -1,0 +1,27 @@
+.logo{
+    flex-grow: 1;
+    background-color: var(--dark-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.more{
+    display: none;
+    position: absolute;
+    font-size: 20px;
+    left: 10px;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px){
+    .logo{
+        flex-grow: 0;
+        top: -40px;
+        left: 0;
+        height: 40px;
+        width: 100vw;
+        opacity: .97;
+    }
+    .more{
+        display: flex;
+    }
+}
