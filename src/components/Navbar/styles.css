@@ -1,10 +1,12 @@
 i{
     font-size: 17px;
+    color: var(--blue);
 }
 p{
     font-size: 10px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    transition: letter-spacing .13s ease-out;
 }
 .more{
     display: none;
@@ -17,7 +19,7 @@ p{
     position: fixed;
     left: 0;
     height: 100vh;
-    width: 70px;
+    width: 75px;
 
     justify-content: space-around;
 }
@@ -59,24 +61,31 @@ p{
     list-style: none;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 2;
+}
+.social-links > li > button > i{
+    color: var(--purple);
+    transition: transform .22s ease-out, 
+                color .35s ease-out;
 }
 
 @media (hover:hover){
     .nav-links > li > button:hover, .social-links > li > button:hover{
         background-color: var(--grey);
-        box-shadow: inset 0 0 10px var(--black);
+        box-shadow: inset 0 0 15px 1px var(--black);
     }
     .nav-links > li > button:hover > div > i{
+        transform: scale(1.15);
         color: var(--blue);
     }
-    .nav-links > li > button:hover > div > *{
-        transform: scale(1.05);
+    .nav-links > li > button:hover > div > p{
+        letter-spacing: 3px;
     }
     .nav-links > li > button:hover ~ .border{
         width: 100%;
     }
     .social-links > li > button:hover > i{
-        transform: scale(1.2);
+        transform: rotateY(360deg);
+        color: var(--blue);
     }
 }
