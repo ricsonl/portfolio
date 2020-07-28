@@ -61,7 +61,7 @@
     .nb > div{
         flex-direction: row-reverse;
         margin: 0 auto;
-        width: 45%;
+        width: 50%;
         justify-content: space-around;
         align-items: center;
     }
@@ -84,8 +84,8 @@
     }
 }
 
-@media screen and (max-width: 520px){
+@media screen and (max-width: 550px){
     .nb > div{
-        width: 70%;
+        width: 60%;
     }
 }

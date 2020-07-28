@@ -6,21 +6,35 @@ import SocialButton from '../SocialButton';
 import Logo from '../Logo';
 
 const Navbar = () => {
+    const toggle = () => {
+        const navlinks = document.querySelector(".nav-links");
+        const sociallinks = document.querySelector(".social-links");
+        if (navlinks) {
+            navlinks.classList.toggle("active");
+        }
+        if (sociallinks) {
+            sociallinks.classList.toggle("active");
+        }
+        return;
+    };
+    
     return (
         <div className="sidebar">
-            <Logo />
+
+            <Logo moreAction={toggle}/>
+
             <ul className="nav-links">
                 <li>
-                    <NavButton icon="fas fa-home" text="Home" />
+                    <NavButton icon="fas fa-home" text="Home" action={toggle} />
                 </li>
                 <li>
-                    <NavButton icon="far fa-user" text="Resume" />
+                    <NavButton icon="far fa-user" text="Resume" action={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="fas fa-cube" text="Projects" />
+                    <NavButton icon="fas fa-cube" text="Projects" action={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="far fa-comment-alt" text="Contact" />
+                    <NavButton icon="far fa-comment-alt" text="Contact" action={toggle}/>
                 </li>
             </ul>
             <ul className="social-links">

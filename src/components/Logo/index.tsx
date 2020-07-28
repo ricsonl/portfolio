@@ -1,21 +1,11 @@
 import React from 'react';
 import './styles.css';
 
-const Logo = () => {
-    const toggleNav = () => {
-        const navlinks = document.querySelector(".nav-links");
-        const sociallinks = document.querySelector(".social-links");
-        if(navlinks){
-            navlinks.classList.toggle("active");
-        }
-        if(sociallinks){
-            sociallinks.classList.toggle("active");
-        }
-    };
+const Logo = (props:any) => {
     return (
         <div className="logo">
-            <i className="more fas fa-bars" onClick={() => toggleNav()}></i>
-            <img height="25" src="https://media.scoutwiki.org/images/c/ce/SVG-logo.svg" alt="g" />
+            <i className="more fas fa-bars" onClick={() => props.moreAction()}></i>
+            <img height="40" src="https://www.logo.wine/a/logo/Zelle_(payment_service)/Zelle_(payment_service)-Logo.wine.svg" alt="g" />
         </div>
     )
 }

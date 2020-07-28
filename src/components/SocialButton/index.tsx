@@ -9,7 +9,7 @@ const SocialButton = (props: any) => {
 
     return (
         <button className="sb" onClick={() => newTab(props.href)}>
-            <i className={`sb-i ${props.icon}`}></i>
+            <i className={props.icon}></i>
         </button>
     )
 }

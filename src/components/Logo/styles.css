@@ -11,6 +11,11 @@
     font-size: 20px;
     left: 10px;
     cursor: pointer;
+    color: var(--white);
+    transition: transform .13s ease-out;
+}
+.more:active{
+    transform: rotateZ(180deg);
 }
 @media screen and (max-width: 768px){
     .logo{
