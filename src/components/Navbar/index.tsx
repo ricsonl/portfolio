@@ -27,13 +27,11 @@ const Navbar = () => {
     };
 
     return (
-        <nav>
-            <div className="logo">
-                <h4>ricson</h4>
-            </div>
+        <div className="sidebar">
+            <div className="logo">Ric</div>
             <ul className="nav-links">
                 <li>
-                    <button onClick={() => goTo('/')}>
+                    <button>
                         <div>
                             <i className="fas fa-home"></i>
                             <p>Home</p>
@@ -42,7 +40,7 @@ const Navbar = () => {
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button onClick={() => goTo('/resume')}>
+                    <button>
                         <div>
                             <i className="far fa-user"></i>
                             <p>Resume</p>
@@ -51,7 +49,7 @@ const Navbar = () => {
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button onClick={() => goTo('/projects')}>
+                    <button>
                         <div>
                             <i className="fas fa-cube"></i>
                             <p>Projects</p>
@@ -60,7 +58,7 @@ const Navbar = () => {
                     <div className="border"></div>
                 </li>
                 <li>
-                    <button onClick={() => goTo('/contact')}>
+                    <button>
                         <div>
                             <i className="far fa-comment-alt"></i>
                             <p>Contact</p>
@@ -68,34 +66,28 @@ const Navbar = () => {
                     </button>
                     <div className="border"></div>
                 </li>
-                <li>
-                    <ul className="social-links">
-                        <li>
-                            <button onClick={ () => newTab('https://github.com/ricsonl') }>
-                                <i className="fab fa-github"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={ () => newTab('https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/') }>
-                                <i className="fab fa-linkedin-in"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => newTab('https://www.hackerrank.com/ricsonl')}>
-                                <i className="fab fa-hackerrank"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </li>
-                
             </ul>
-
+            <ul className="social-links">
+                <li>
+                    <button onClick={() => newTab('https://github.com/ricsonl')}>
+                        <i className="fab fa-github"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onClick={() => newTab('https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/')}>
+                        <i className="fab fa-linkedin-in"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onClick={() => newTab('https://www.hackerrank.com/ricsonl')}>
+                        <i className="fab fa-hackerrank"></i>
+                    </button>
+                </li>
+            </ul>
             <div className="more" onClick={() => toggleNav(true)} >
                 <i className="fas fa-arrow-left"></i>
             </div>
-
-            <div className="cover" onClick={() => toggleNav(false)}></div>
-        </nav>
+        </div>
     )
 }
 

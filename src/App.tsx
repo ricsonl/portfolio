@@ -7,18 +7,44 @@ import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
-import { Route, BrowserRouter } from 'react-router-dom';
-
 const App = () => {
+  const homeRef = React.createRef();
+  const resumeRef = React.createRef();
+  const projectsRef = React.createRef();
+  const contactRef = React.createRef();
   return (
     <>
       <Navbar />
-      <BrowserRouter>
-        <Route component={Home} path="/" exact />
-        <Route component={Resume} path="/resume" />
-        <Route component={Projects} path="/projects" />
-        <Route component={Contact} path="/contact" />
-      </BrowserRouter>
+      <Home />
+      <Resume />
+      <Projects />
+      <Contact />
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
+      =<br/>
     </>
   );
 }
