@@ -5,6 +5,7 @@
   --grey: #1f2833;
   --dark-grey: #101318;
   --black: #0b0c10;
+    height: 3000px;
 }
 
 * {
@@ -15,7 +16,7 @@
   color: var(--white);
 }
 
-body {
+html {
   width: 100%;
   height: 100%;
   background: var(--grey);

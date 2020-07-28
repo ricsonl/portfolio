@@ -19,32 +19,6 @@ const App = () => {
       <Resume />
       <Projects />
       <Contact />
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
-      =<br/>
     </>
   );
 }

@@ -1,0 +1,47 @@
+.nb{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.nb-div{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: space-between;
+}
+.nb-i{
+    font-size: 17px;
+    color: var(--blue);
+    transition: transform .2s ease-out;
+}
+.nb-p{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: letter-spacing .2s ease-out;
+}
+.nb-border{
+    position: absolute;
+    border-bottom: 2px solid var(--purple);
+    width: 0%;
+    transition: width .2s ease-out;
+}
+@media (hover:hover){
+    .nb:hover{
+        background-color: var(--grey);
+        box-shadow: inset 0 0 15px 1px var(--black);
+    }
+    .nb:hover .nb-i{
+        transform: scale(1.15);
+        color: var(--blue);
+    }
+    .nb:hover .nb-p{
+        letter-spacing: 3px;
+    }
+    .nb:hover ~ .nb-border{
+        width: 100%;
+    }
+}

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './styles.css';
 
+import NavButton from '../NavButton';
+import SocialButton from '../SocialButton';
+
 const Navbar = () => {
 
     const [nav, setNav] = useState(false);
@@ -21,67 +24,32 @@ const Navbar = () => {
         toggleNav(false);
     };
 
-    const newTab = (url) => {
-        var win = window.open(url, '_blank');
-        if(win){ win.focus(); }
-    };
-
-    return (
+    return ( /*far fa-user, fas fa-cube, far fa-comment*/
         <div className="sidebar">
             <div className="logo">Ric</div>
             <ul className="nav-links">
                 <li>
-                    <button>
-                        <div>
-                            <i className="fas fa-home"></i>
-                            <p>Home</p>
-                        </div>
-                    </button>
-                    <div className="border"></div>
+                    <NavButton icon="fas fa-home" text="Home" />
                 </li>
                 <li>
-                    <button>
-                        <div>
-                            <i className="far fa-user"></i>
-                            <p>Resume</p>
-                        </div>
-                    </button>
-                    <div className="border"></div>
+                    <NavButton icon="far fa-user" text="Resume" />
                 </li>
                 <li>
-                    <button>
-                        <div>
-                            <i className="fas fa-cube"></i>
-                            <p>Projects</p>
-                        </div>
-                    </button>
-                    <div className="border"></div>
+                    <NavButton icon="fas fa-cube" text="Projects" />
                 </li>
                 <li>
-                    <button>
-                        <div>
-                            <i className="far fa-comment-alt"></i>
-                            <p>Contact</p>
-                        </div>
-                    </button>
-                    <div className="border"></div>
+                    <NavButton icon="far fa-comment" text="Contact" />
                 </li>
             </ul>
             <ul className="social-links">
                 <li>
-                    <button onClick={() => newTab('https://github.com/ricsonl')}>
-                        <i className="fab fa-github"></i>
-                    </button>
+                    <SocialButton icon="fab fa-github" href="https://github.com/ricsonl" />
                 </li>
                 <li>
-                    <button onClick={() => newTab('https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/')}>
-                        <i className="fab fa-linkedin-in"></i>
-                    </button>
+                    <SocialButton icon="fab fa-linkedin-in" href="https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/" />
                 </li>
                 <li>
-                    <button onClick={() => newTab('https://www.hackerrank.com/ricsonl')}>
-                        <i className="fab fa-hackerrank"></i>
-                    </button>
+                    <SocialButton icon="fab fa-hackerrank" href="https://www.hackerrank.com/ricsonl" />
                 </li>
             </ul>
             <div className="more" onClick={() => toggleNav(true)} >
