@@ -28,31 +28,31 @@ const Navbar = () => {
     return (
         <div className="sidebar">
 
-            <Logo toggle={toggle}/>
+            <Logo icon="subject" toggle={toggle}/>
 
             <ul className="nav-links">
                 <li>
-                    <NavButton icon="fas fa-home" text="Home" toggle={toggle} />
+                    <NavButton icon="home" text="Home" toggle={toggle} />
                 </li>
                 <li>
-                    <NavButton icon="far fa-user" text="Resume" toggle={toggle}/>
+                    <NavButton icon="assignment_ind" text="Resume" toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="fas fa-cube" text="Projects" toggle={toggle}/>
+                    <NavButton icon="code" text="Projects" toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="far fa-comment-alt" text="Contact" toggle={toggle}/>
+                    <NavButton icon="forum" text="Contact" toggle={toggle}/>
                 </li>
             </ul>
             <ul className="social-links">
                 <li>
-                    <SocialButton icon="fab fa-github" href="https://github.com/ricsonl" />
+                    <SocialButton icon="github" href="https://github.com/ricsonl" />
                 </li>
                 <li>
-                    <SocialButton icon="fab fa-linkedin" href="https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/" />
+                    <SocialButton icon="linkedin" href="https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/" />
                 </li>
                 <li>
-                    <SocialButton icon="fab fa-hackerrank" href="https://www.hackerrank.com/ricsonl" />
+                    <SocialButton icon="instagram" href="https://www.instagram.com/ricsonluiz/" />
                 </li>
             </ul>
         </div>

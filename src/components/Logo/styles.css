@@ -8,14 +8,16 @@
 .more{
     display: none;
     position: absolute;
-    font-size: 20px;
-    left: 10px;
+    height: 26px;
+    width: 26px;
+    left: 12px;
     cursor: pointer;
-    color: var(--white);
-    transition: transform .13s ease-out;
+    stroke: none;
+    fill: var(--white);
+    transition: transform .07s ease-out;
 }
 .more:active{
-    transform: rotateZ(180deg);
+    transform: translateX(9px);
 }
 @media screen and (max-width: 768px){
     .logo{

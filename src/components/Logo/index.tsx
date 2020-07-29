@@ -6,7 +6,7 @@ import logo from '../../assets/visual_test.svg';
 const Logo = (props:any) => {
     return (
         <div className="logo">
-            <i className="more fas fa-bars" onClick={() => props.toggle(true)}></i>
+            <svg className="more" onClick={() => props.toggle(true)}><use xlinkHref={`#${props.icon}`}></use></svg>
             <img height={35} src={logo} alt="g" />
         </div>
     )

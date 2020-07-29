@@ -9,7 +9,7 @@ const SocialButton = (props: any) => {
 
     return (
         <button className="sb" onClick={() => newTab(props.href)}>
-            <i className={props.icon}></i>
+            <svg className="icon"><use xlinkHref={`#${props.icon}`}></use></svg>
         </button>
     )
 }

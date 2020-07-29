@@ -6,7 +6,7 @@ const NavButton = (props: any) => {
         <>
             <button className="nb" onClick={() => props.toggle(false)}>
                 <div>
-                    <i className={props.icon}></i>
+                    <svg className="icon"><use xlinkHref={`#${props.icon}`}></use></svg>
                     <p>{props.text}</p>
                 </div>
             </button>
