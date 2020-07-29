@@ -9,7 +9,7 @@
 .nb > div{
     display: flex;
     flex-direction: column;
-    height: 40%;
+    height: 44%;
     justify-content: space-between;
 }
 .nb > div > i{
@@ -64,14 +64,11 @@
         transform: scale(.87);
     }
     @media screen and (min-width: 768px) {
-        .nb:active ~ .border{
-            transition: width .03s ease-out;
-            width: 100%;
+        .border{
+            transition: width .07s ease-out;
         }
-    }
-    @media screen and (max-width: 768px) {
-        .nb{
-            border-bottom: 1px solid var(--purple);
+        .nb:active ~ .border{
+            width: 100%;
         }
     }
 }
@@ -79,13 +76,14 @@
     .nb > div{
         flex-direction: row-reverse;
         margin: 0 auto;
-        width: 35%;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
     }
 
     .nb > div > i{
         font-size: 23px;
+        position: absolute;
+        left: 30vw;
     }
 
     .nb > div > p{
@@ -93,8 +91,8 @@
     }
 }
 
-@media screen and (max-width: 550px){
-    .nb > div{
-        width: 53%;
+@media screen and (max-width: 520px){
+    .nb > div > i{
+        left: 23vw;
     }
 }
