@@ -1,0 +1,23 @@
+.home-content{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.home-content h1{
+    font-size: 45px;
+}
+
+.home-content p{
+    text-align: center;
+    padding: 0 10%;
+}
+
+.home-content:nth-child(1){
+    background-image: url("../../assets/banner_desk.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}

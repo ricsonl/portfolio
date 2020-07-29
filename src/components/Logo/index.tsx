@@ -5,9 +5,9 @@ const Logo = (props:any) => {
     return (
         <div className="area">
             <div onClick={() => props.toggle(true)}>
-                <svg className="moreicon"><use xlinkHref={`#${props.icon}`}></use></svg>
+                <svg className="moreicon"><use xlinkHref={`#${props.moreIcon}`}></use></svg>
             </div>
-            <svg className="logo"><use xlinkHref='#logo'></use></svg>
+            <svg className="logo"><use xlinkHref={`#${props.logo}`}></use></svg>
         </div>
     )
 }

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
 
 import NavButton from '../NavButton';
 import SocialButton from '../SocialButton';
 import Logo from '../Logo';
 
-const Navbar = () => {
+const Navbar = (props:any) => {
     const toggle = (both) => {
         const navlinks = document.querySelector(".nav-links");
         const sociallinks = document.querySelector(".social-links");
@@ -24,35 +24,35 @@ const Navbar = () => {
         }
         return;
     };
-    
+
     return (
         <div className="sidebar">
 
-            <Logo icon="subject" toggle={toggle}/>
+            <Logo logo="svg-logo" moreIcon="svg-subject" toggle={toggle}/>
 
             <ul className="nav-links">
                 <li>
-                    <NavButton icon="home" text="Home" toggle={toggle} />
+                    <NavButton icon="svg-home" text="Home" contentRef={props.contentRefs.homeRef} toggle={toggle} />
                 </li>
                 <li>
-                    <NavButton icon="assignment_ind" text="Resume" toggle={toggle}/>
+                    <NavButton icon="svg-assignment_ind" text="Resume" contentRef={props.contentRefs.resumeRef} toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="code" text="Projects" toggle={toggle}/>
+                    <NavButton icon="svg-code" text="Projects" contentRef={props.contentRefs.projectsRef} toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="forum" text="Contact" toggle={toggle}/>
+                    <NavButton icon="svg-forum" text="Contact" contentRef={props.contentRefs.contactRef} toggle={toggle}/>
                 </li>
             </ul>
             <ul className="social-links">
                 <li>
-                    <SocialButton icon="github" href="https://github.com/ricsonl" />
+                    <SocialButton icon="svg-github" href="https://github.com/ricsonl" />
                 </li>
                 <li>
-                    <SocialButton icon="linkedin" href="https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/" />
+                    <SocialButton icon="svg-linkedin" href="https://www.linkedin.com/in/ricson-vila%C3%A7a-8a394a190/" />
                 </li>
                 <li>
-                    <SocialButton icon="instagram" href="https://www.instagram.com/ricsonluiz/" />
+                    <SocialButton icon="svg-instagram" href="https://www.instagram.com/ricsonluiz/" />
                 </li>
             </ul>
         </div>

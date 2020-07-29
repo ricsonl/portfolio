@@ -1,9 +1,14 @@
 import React from 'react';
 import './styles.css';
 
-const Projects = () => {
+const Projects = (props: any) => {
     return (
-        <div className="proj"></div>
+        <section>
+            <div className="projects" ref={props.contentRef}>
+                <h1>Projects</h1>
+                <p>bla bla bla</p>
+            </div>
+        </section>
     )
 }
 

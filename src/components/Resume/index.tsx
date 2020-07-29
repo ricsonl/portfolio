@@ -1,9 +1,14 @@
 import React from 'react';
 import './styles.css';
 
-const Resume = () => {
+const Resume = (props: any) => {
     return (
-        <div></div>
+        <section>
+            <div className="resume" ref={props.contentRef}>
+                <h1>Resume</h1>
+                <p>bla bla bla</p>
+            </div>
+        </section>
     )
 }
 
