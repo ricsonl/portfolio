@@ -1,28 +1,32 @@
-.logo{
+.area{
     flex-grow: 1;
     background-color: var(--dark-grey);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo > div{
+.area .logo{
+    height: 46px;
+    width: 46px;
+}
+.area > div{
     display: none;
     position: absolute;
     left: 12px;
     cursor: pointer;
 }
-.logo > div > .moreicon{
+.area .moreicon{
     height: 27px;
     width: 27px;
     stroke: none;
     fill: var(--white);
     transition: transform .07s ease-out;
 }
-.logo > div:active > .moreicon{
+.area > div:active > .moreicon{
     transform: translateX(9px);
 }
 @media screen and (max-width: 768px){
-    .logo{
+    .area{
         flex-grow: 0;
         top: -40px;
         left: 0;
@@ -30,7 +34,11 @@
         width: 100vw;
         opacity: .97;
     }
-    .logo > div{
+    .area .logo{
+        height: 33px;
+        width: 33px;
+    }
+    .area > div{
         display: flex;
     }
 }

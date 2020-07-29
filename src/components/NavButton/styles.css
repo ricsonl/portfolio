@@ -13,14 +13,14 @@
     justify-content: space-between;
     align-items: center;
 }
-.nb > div > .icon{
+.nb .icon{
     height: 30px;
     width: 30px;
     stroke: transparent;
     fill: var(--blue);
     transition: transform .2s ease-out;
 }
-.nb > div > p{
+.nb p{
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 1.5px;
@@ -37,10 +37,10 @@
         background-color: var(--grey);
         box-shadow: inset 0 0 15px 1px var(--black);
     }
-    .nb:hover > div > .icon{
+    .nb:hover .icon{
         transform: scale(1.15);
     }
-    .nb:hover > div > p{
+    .nb:hover p{
         letter-spacing: 3px;
     }
     .nb:hover ~ .border{
@@ -50,13 +50,13 @@
         .nb:hover ~ .border{
             width: 100vw;
         }
-        .nb:hover > div > p{
+        .nb:hover p{
             letter-spacing: 4px;
         }
     }
 }
 @media (hover:none){
-    .nb > div > .icon{
+    .nb .icon{
         transition: none;
     }
     .nb:active{
@@ -83,20 +83,20 @@
         align-items: center;
     }
 
-    .nb > div > .icon{
+    .nb .icon{
         height: 29px;
         width: 29px;
         position: absolute;
         left: 30vw;
     }
 
-    .nb > div > p{
+    .nb p{
         font-size: 17px;
     }
 }
 
 @media screen and (max-width: 520px){
-    .nb > div > .icon{
+    .nb .icon{
         left: 23vw;
     }
 }
