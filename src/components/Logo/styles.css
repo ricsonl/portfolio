@@ -5,18 +5,20 @@
     justify-content: center;
     align-items: center;
 }
-.more{
+.logo > div{
     display: none;
     position: absolute;
-    height: 26px;
-    width: 26px;
     left: 12px;
     cursor: pointer;
+}
+.logo > div > .moreicon{
+    height: 27px;
+    width: 27px;
     stroke: none;
     fill: var(--white);
     transition: transform .07s ease-out;
 }
-.more:active{
+.logo > div:active > .moreicon{
     transform: translateX(9px);
 }
 @media screen and (max-width: 768px){
@@ -28,7 +30,7 @@
         width: 100vw;
         opacity: .97;
     }
-    .more{
+    .logo > div{
         display: flex;
     }
 }

@@ -46,7 +46,7 @@
     .nb:hover ~ .border{
         width: 100%;
     }
-    @media screen and (max-width:768) {
+    @media screen and (max-width:768px) {
         .nb:hover ~ .border{
             width: 100vw;
         }
