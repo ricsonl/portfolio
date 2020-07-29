@@ -6,14 +6,21 @@ import SocialButton from '../SocialButton';
 import Logo from '../Logo';
 
 const Navbar = () => {
-    const toggle = () => {
+    const toggle = (both) => {
         const navlinks = document.querySelector(".nav-links");
         const sociallinks = document.querySelector(".social-links");
-        if (navlinks) {
-            navlinks.classList.toggle("active");
-        }
-        if (sociallinks) {
-            sociallinks.classList.toggle("active");
+
+        if(navlinks && sociallinks){
+            if(both){
+                navlinks.classList.toggle("active");
+                sociallinks.classList.toggle("active");
+                return;
+            }
+            if(navlinks.classList.contains("active"))
+                navlinks.classList.toggle("active");
+            if(sociallinks.classList.contains("active"))
+                sociallinks.classList.toggle("active");
+            return;
         }
         return;
     };
@@ -21,20 +28,20 @@ const Navbar = () => {
     return (
         <div className="sidebar">
 
-            <Logo moreAction={toggle}/>
+            <Logo toggle={toggle}/>
 
             <ul className="nav-links">
                 <li>
-                    <NavButton icon="fas fa-home" text="Home" action={toggle} />
+                    <NavButton icon="fas fa-home" text="Home" toggle={toggle} />
                 </li>
                 <li>
-                    <NavButton icon="far fa-user" text="Resume" action={toggle}/>
+                    <NavButton icon="far fa-user" text="Resume" toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="fas fa-cube" text="Projects" action={toggle}/>
+                    <NavButton icon="fas fa-cube" text="Projects" toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="far fa-comment-alt" text="Contact" action={toggle}/>
+                    <NavButton icon="far fa-comment-alt" text="Contact" toggle={toggle}/>
                 </li>
             </ul>
             <ul className="social-links">

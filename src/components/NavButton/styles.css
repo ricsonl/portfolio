@@ -26,7 +26,7 @@
 .border{
     position: absolute;
     border-bottom: 2px solid var(--purple);
-    width: 0%;
+    width: 0;
     transition: width .2s ease-out;
 }
 @media (hover:hover){
@@ -43,26 +43,44 @@
     .nb:hover ~ .border{
         width: 100%;
     }
+    @media screen and (max-width:768) {
+        .nb:hover ~ .border{
+            width: 100vw;
+        }
+        .nb:hover > div > p{
+            letter-spacing: 4px;
+        }
+    }
 }
 @media (hover:none){
+    .nb > div > i{
+        transition: none;
+    }
     .nb:active{
         background-color: var(--grey);
         box-shadow: inset 0 0 15px 1px var(--black);
     }
-    .nb:active > div > i{
-        transform: scale(.85);
+    .nb:active > div > *{
+        transform: scale(.87);
     }
-    .nb:active ~ .border{
-        transition: none;
-        width: 100%;
+    @media screen and (min-width: 768px) {
+        .nb:active ~ .border{
+            transition: width .03s ease-out;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .nb{
+            border-bottom: 1px solid var(--purple);
+        }
     }
 }
 @media screen and (max-width: 768px){
     .nb > div{
         flex-direction: row-reverse;
         margin: 0 auto;
-        width: 50%;
-        justify-content: space-around;
+        width: 35%;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -73,19 +91,10 @@
     .nb > div > p{
         font-size: 17px;
     }
-    
-    @media (hover:hover){
-        .nb:hover ~ .border{
-            width: 100vh;
-        }
-        .nb:hover > div > p{
-            letter-spacing: 4px;
-        }
-    }
 }
 
 @media screen and (max-width: 550px){
     .nb > div{
-        width: 60%;
+        width: 53%;
     }
 }

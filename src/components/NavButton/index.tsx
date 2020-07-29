@@ -4,7 +4,7 @@ import './styles.css';
 const NavButton = (props: any) => {
     return (
         <>
-            <button className="nb" onClick={() => props.action()}>
+            <button className="nb" onClick={() => props.toggle(false)}>
                 <div>
                     <i className={props.icon}></i>
                     <p>{props.text}</p>
