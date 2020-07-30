@@ -5,7 +5,10 @@ const Home = (props:any) => {
     
     const parallax = () => {
         const offset = window.pageYOffset;
-
+        /*const el = document.querySelector(".home-content");
+        if(el)
+            (el as HTMLElement).style.backgroundPositionY = offset * 0.5 + "px";
+        */
         if(props.contentRef.current)
             props.contentRef.current.style.backgroundPositionY = offset * 0.5 + "px";
     };
@@ -13,16 +16,16 @@ const Home = (props:any) => {
     window.addEventListener("scroll", parallax);
     
     return (
-        <section id="home">
+        <section>
             <div className="home-content" ref={props.contentRef}>
-                <h1>Home</h1>
-                <p> bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla 
-                    blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla
-                    bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
-                    bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla 
-                    blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla
-                    bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
-                </p>
+                <div className="inner">
+                    <h1>Home</h1>
+                    <p> 
+                        bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla
+                        blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla
+                        bla blabla bla blabla bla blabla bla blabla
+                    </p>
+                </div>
             </div>
         </section>
     );

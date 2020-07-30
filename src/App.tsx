@@ -10,10 +10,10 @@ import Contact from './components/Contact';
 const App = () => {
 
   const contentRefs = {
-    homeRef: useRef() as React.MutableRefObject<HTMLDivElement>,
-    resumeRef: useRef() as React.MutableRefObject<HTMLDivElement>,
-    projectsRef: useRef() as React.MutableRefObject<HTMLDivElement>,
-    contactRef: useRef() as React.MutableRefObject<HTMLDivElement>,
+    homeRef: useRef() as React.MutableRefObject<HTMLElement>,
+    resumeRef: useRef() as React.MutableRefObject<HTMLElement>,
+    projectsRef: useRef() as React.MutableRefObject<HTMLElement>,
+    contactRef: useRef() as React.MutableRefObject<HTMLElement>,
   }
 
   return (

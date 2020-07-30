@@ -1,23 +1,40 @@
 .home-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
+    width: 100%;
+}
+.home-content .inner{
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 50%;
 }
-.home-content h1{
-    font-size: 45px;
-}
-
 .home-content p{
     text-align: center;
-    padding: 0 10%;
 }
-
 .home-content:nth-child(1){
-    background-image: url("../../assets/banner_desk.jpg");
     background-size: cover;
     background-position: center center;
     height: 100vh;
+}
+.home-content:before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--grey);
+    opacity: .75;
+}
+@media screen and (min-width:768px){
+    .home-content:nth-child(1){
+        background-image: url("../../assets/banner_desk.jpg");
+    }
+}
+@media screen and (max-width:768px){
+    .home-content:nth-child(1){
+        background-image: url("../../assets/banner_mobile.jpg");
+    }
 }
