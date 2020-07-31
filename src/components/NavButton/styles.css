@@ -5,13 +5,8 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
-}
-.nb > div{
     display: flex;
-    flex-direction: column;
-    height: 44%;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 .nb .icon{
     height: 30px;
@@ -21,88 +16,104 @@
     transition: transform .2s ease-out;
 }
 .nb p{
-    font-size: 12px;
     font-weight: 500;
-    letter-spacing: 1.5px;
+    font-size: 13px;
     transition: letter-spacing .2s ease-out;
 }
-.border{
-    position: absolute;
-    border-bottom: 2px solid var(--purple);
-    width: 0;
-    transition: width .2s ease-out;
-}
-
 @media (hover:hover){
     .nb:hover{
         background-color: var(--grey);
         box-shadow: inset 0 0 15px 1px var(--black);
     }
-    .nb:hover .icon{
-        transform: scale(1.15);
-    }
-    .nb:hover p{
-        letter-spacing: 3px;
-    }
-    .nb:hover ~ .border{
-        width: 100%;
-    }
-    @media screen and (max-width:768px) {
-        .nb:hover ~ .border{
-            width: 100vw;
-        }
-        .nb:hover p{
-            letter-spacing: 4px;
-        }
-    }
 }
 @media (hover:none){
-    .nb .icon{
-        transition: none;
-    }
     .nb:active{
         background-color: var(--grey);
-        box-shadow: inset 0 0 110px 1px var(--black);
+        box-shadow: inset 0 0 15px 1px var(--black);
     }
-    .nb:active > div > *{
-        transform: scale(.87);
+    .nb:after{
+        transition: width .07s ease-out;
     }
-    @media screen and (min-width: 768px) {
-        .border{
-            transition: width .07s ease-out;
+}
+@media screen and (min-width: 768px){
+    .nb > div{
+        align-self: center;
+    }
+    .nb:after{
+        content: "";
+        border-bottom: 2px solid var(--purple);
+        position: absolute;
+        left: 0;
+        align-self: flex-end;
+        width: 0;
+    }
+    
+    @media (hover:hover){
+        .nb:after{
+            transition: width .2s ease-out;
         }
-        .nb:active ~ .border{
+        .nb:hover:after{
             width: 100%;
         }
+        .nb:hover .icon{
+            transform: scale(1.17);
+        }
+        .nb:hover p{
+            letter-spacing: 1.5px;
+        }
     }
-    @media screen and (max-width: 768px) {
-        .nb:active{
-            border-bottom: 3px solid var(--purple);
+    @media (hover:none){
+        .nb:active:after{
+            width: 100%;
+        }
+        .nb:active > div{
+            transition: transform .07s ease-out;
+            transform: scale(.88);
         }
     }
 }
 @media screen and (max-width: 768px){
     .nb > div{
-        flex-direction: row-reverse;
-        margin: 0 auto;
-        justify-content: center;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
         align-items: center;
     }
-
     .nb .icon{
-        height: 29px;
-        width: 29px;
         position: absolute;
-        left: 30vw;
+        left: 22vw;
     }
-
     .nb p{
-        font-size: 17px;
+        font-size: 18px;
     }
-}
-
-@media screen and (max-width: 520px){
-    .nb .icon{
-        left: 23vw;
+    @media screen and (min-width: 550px){
+        .nb .icon{
+            left: 30vw;
+        }
+    }
+    @media (hover:hover){
+        .nb:after{
+            content: "";
+            border-bottom: 2px solid var(--purple);
+            position: absolute;
+            left: 0;
+            align-self: flex-end;
+            width: 0;
+            transition: width .2s ease-out;
+        }
+        .nb:hover:after{
+            width: 100vw;
+        }
+        .nb:hover .icon{
+            transform: scale(1.3);
+        }
+        .nb:hover p{
+            letter-spacing: 2.2px;
+        }
+    }
+    @media (hover:none){
+        .nb:active{
+            border-bottom: 1px solid var(--purple);
+        }
     }
 }
