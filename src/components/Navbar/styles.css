@@ -1,5 +1,6 @@
 .sidebar{
     -webkit-tap-highlight-color:transparent;
+    box-shadow: 0 0 20px 0px var(--black);
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -44,6 +45,7 @@
     }
     .sidebar{
         height: 100vh;
+        box-shadow: none;
         top: 0px;
         opacity: .96;
     }
