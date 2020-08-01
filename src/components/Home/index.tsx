@@ -7,9 +7,9 @@ const Home = (props:any) => {
         const offset = window.pageYOffset;
         const skw = document.querySelector(".skew");
         if(skw){
-            (skw as HTMLElement).style.backgroundPositionY = offset * .6 + "px";
+            (skw as HTMLElement).style.backgroundPositionY = offset * .5 + "px";
         }
-        if(offset < window.innerHeight){
+        if (offset < window.innerHeight){
             const spacing = document.getElementsByClassName("spacing");
             for (let i = 0; i < spacing.length; i++) {
                 (spacing[i] as HTMLElement).style.letterSpacing = 3 + offset * .05 + "px";
@@ -27,6 +27,9 @@ const Home = (props:any) => {
                     <h1 className="spacing">Ricson Vilaça</h1>
                     <p className="home-tag spacing">&nbsp;&lt;/&gt;</p>
                     <p className="home-sub spacing">software developer</p>
+                    <div className="home-more">
+                        
+                    </div>
                 </div>
             </div>
         </section>

@@ -9,9 +9,9 @@
 .skew{
     transform: skew(0deg, -6deg);
     position: absolute;
-    top: -13vh;
+    top: -10vh;
     right: 0;
-    height: 113vh;
+    height: 110vh;
     width: calc(100vw - 75px);
     background: url("../../assets/home.jpg");
     background-size: cover;
@@ -25,6 +25,7 @@
     justify-content: center;
 }
 .spacing{
+    letter-spacing: 3px;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -34,7 +35,7 @@
 }
 .home-tag{
     text-align: center;
-    font-weight: 100;
+    font-weight: 700;
     font-size: 40px;
     color: var(--purple);
 }
