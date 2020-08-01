@@ -13,7 +13,8 @@
     right: 0;
     height: 113vh;
     width: calc(100vw - 75px);
-    background: var(--dark-grey);
+    background: url("../../assets/home.jpg");
+    background-size: cover;
 }
 .home-content .inner{
     position: absolute;
@@ -33,7 +34,7 @@
 .home-tag{
     text-align: center;
     font-weight: 100;
-    font-size: 30px;
+    font-size: 40px;
     color: var(--purple);
 }
 .home-sub{
@@ -45,12 +46,14 @@
 @media screen and (max-width: 768px){
     .skew{
         width: 100vw;
+        background: url("../../assets/home_mobile.jpg");
+        background-size: cover;
     }
     .home-content h1{
         font-size: 50px;
     }
     .home-tag{
-        font-size: 25px;
+        font-size: 30px;
     }
     .home-sub{
         font-size: 25px;
@@ -62,7 +65,7 @@
         font-size: 35px;
     }
     .home-tag{
-        font-size: 17px;
+        font-size: 22px;
         font-weight: 400;
     }
     .home-sub{
