@@ -15,6 +15,7 @@
     width: calc(100vw - 75px);
     background: url("../../assets/home.jpg");
     background-size: cover;
+    opacity: .15;
 }
 .home-content .inner{
     position: absolute;

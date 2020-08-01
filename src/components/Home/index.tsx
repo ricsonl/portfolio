@@ -8,9 +8,7 @@ const Home = (props:any) => {
         const skw = document.querySelector(".skew");
         if(skw){
             (skw as HTMLElement).style.backgroundPositionY = offset * .6 + "px";
-            (skw as HTMLElement).style.opacity = 0.1+offset*0.002 + "";
         }
-
         if(offset < window.innerHeight){
             const spacing = document.getElementsByClassName("spacing");
             for (let i = 0; i < spacing.length; i++) {
