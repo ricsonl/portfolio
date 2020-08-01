@@ -50,6 +50,7 @@
         width: 100vw;
         background: url("../../assets/home_mobile.jpg");
         background-size: cover;
+        background-position: center top;
     }
     .home-content h1{
         font-size: 50px;

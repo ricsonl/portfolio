@@ -9,10 +9,12 @@ const Home = (props:any) => {
         if(skw){
             (skw as HTMLElement).style.backgroundPositionY = offset * .5 + "px";
         }
+        const f = (window.screen.width > 450) ? .05 : .02;
         if (offset < window.innerHeight){
             const spacing = document.getElementsByClassName("spacing");
             for (let i = 0; i < spacing.length; i++) {
-                (spacing[i] as HTMLElement).style.letterSpacing = 3 + offset * .05 + "px";
+                let s = (spacing[i] as HTMLElement);
+                s.style.letterSpacing = 3 + offset * f + "px";
             }
         }
     };
