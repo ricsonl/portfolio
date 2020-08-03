@@ -25,7 +25,6 @@
     justify-content: center;
 }
 .spacing{
-    letter-spacing: 3px;
     overflow: hidden;
     white-space: nowrap;
 }

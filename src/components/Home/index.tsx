@@ -1,34 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 
 const Home = (props:any) => {
 
-    const homeEffects = () => {
-        const offset = window.pageYOffset;
-        const skw = document.querySelector(".skew");
-        if(skw){
-            (skw as HTMLElement).style.backgroundPositionY = offset * .5 + "px";
-        }
-        const f = (window.screen.width > 450) ? .05 : .02;
-        if (offset < window.innerHeight){
-            const spacing = document.getElementsByClassName("spacing");
-            for (let i = 0; i < spacing.length; i++) {
-                let s = (spacing[i] as HTMLElement);
-                s.style.letterSpacing = 3 + offset * f + "px";
-            }
-        }
-    };
+    const [ offset, setOffset ] = useState(0);
+    const [ letterSpacing, setLetterSpacing ] = useState(3);
 
-    window.addEventListener("scroll", homeEffects);
+    useEffect(() => {
+        function handleScroll() {
+            setOffset(window.pageYOffset);
+
+            const f = (window.screen.width > 450) ? .04 : .02;
+            setLetterSpacing(3 + offset*f);
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [ offset ]);
     
     return (
         <section>
-            <div className="skew"></div>
+            <div className="skew" style={{ backgroundPositionY: offset*.5 }}></div>
             <div className="home-content" ref={props.contentRef}>
                 <div className="inner">
-                    <h1 className="spacing">Ricson Vilaça</h1>
-                    <p className="home-tag spacing">&nbsp;&lt;/&gt;</p>
-                    <p className="home-sub spacing">software developer</p>
+                    <h1 className="spacing" style={{ letterSpacing: letterSpacing }}>Ricson Vilaça</h1>
+                    <p className="home-tag spacing" style={{ letterSpacing: letterSpacing }}>&nbsp;&lt;/&gt;</p>
+                    <p className="home-sub spacing" style={{ letterSpacing: letterSpacing }}>software developer</p>
                     <div className="home-more">
                         
                     </div>
