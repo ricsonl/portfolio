@@ -28,7 +28,7 @@ const Navbar = (props:any) => {
     return (
         <div className="sidebar">
 
-            <Logo logo="svg-logo" moreIcon="svg-subject" toggle={toggle}/>
+            <Logo /*logo="svg-logo"*/ moreIcon="svg-subject" toggle={toggle}/>
 
             <ul className="nav-links">
                 <li>
