@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './styles.css';
 
 import NavButton from '../NavButton';
 import SocialButton from '../SocialButton';
 import Logo from '../Logo';
 
-const Navbar = (props:any) => {
+import RefsContext from '../../context/RefsContext';
+
+const Navbar = () => {
+
+    const refsContext = useContext(RefsContext);
+
+    const handleClick = (ref) => {
+      if(ref.current)
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+      toggle(false);
+    };
+
     const toggle = (both) => {
         const navlinks = document.querySelector(".nav-links");
         const sociallinks = document.querySelector(".social-links");
@@ -32,16 +43,16 @@ const Navbar = (props:any) => {
 
             <ul className="nav-links">
                 <li>
-                    <NavButton icon="svg-home" text="Home" contentRef={props.contentRefs.homeRef} toggle={toggle} />
+                    <NavButton onClick={() => handleClick(refsContext.homeRef)} icon="svg-home" text="Home" toggle={toggle} />
                 </li>
                 <li>
-                    <NavButton icon="svg-assignment_ind" text="Resume" contentRef={props.contentRefs.resumeRef} toggle={toggle}/>
+                    <NavButton onClick={() => handleClick(refsContext.resumeRef)} icon="svg-assignment_ind" text="Resume" toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="svg-code" text="Projects" contentRef={props.contentRefs.projectsRef} toggle={toggle}/>
+                    <NavButton onClick={() => handleClick(refsContext.projectsRef)} icon="svg-code" text="Projects" toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton icon="svg-forum" text="Contact" contentRef={props.contentRefs.contactRef} toggle={toggle}/>
+                    <NavButton onClick={() => handleClick(refsContext.contactRef)} icon="svg-forum" text="Contact" toggle={toggle}/>
                 </li>
             </ul>
             <ul className="social-links">

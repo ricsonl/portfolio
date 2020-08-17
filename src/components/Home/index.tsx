@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext, RefObject } from 'react';
+
+import RefsContext from '../../context/RefsContext';
+
 import './styles.css';
 
-const Home = (props:any) => {
+const Home = () => {
 
     const [ offset, setOffset ] = useState(0);
     const [ letterSpacing, setLetterSpacing ] = useState(3);
+
+    const refsContext = useContext(RefsContext);
 
     useEffect(() => {
         function handleScroll() {
@@ -14,7 +19,7 @@ const Home = (props:any) => {
             setLetterSpacing(3 + offset*f);
         }
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -24,7 +29,7 @@ const Home = (props:any) => {
     return (
         <section>
             <div className="skew" style={{ backgroundPositionY: offset*.5 }}></div>
-            <div className="home-content" ref={props.contentRef}>
+            <div className="home-content" ref={refsContext.homeRef as RefObject<HTMLDivElement>}>
                 <div className="inner">
                     <h1 className="spacing" style={{ letterSpacing: letterSpacing }}>Ricson Vilaça</h1>
                     <p className="home-tag spacing" style={{ letterSpacing: letterSpacing }}>&nbsp;&lt;/&gt;</p>
