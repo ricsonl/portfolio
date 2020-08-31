@@ -8,22 +8,34 @@
 .area .logo{
     height: 46px;
     width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.area > div{
-    display: none;
-    position: absolute;
-    left: 12px;
-    cursor: pointer;
+.area > svg{
+  height: 24px;
+  width: 24px;
+  stroke: none;
+  fill: var(--white);
+  transition: transform .07s ease-out;
+  display: none;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  cursor: pointer;
 }
-.area .moreicon{
-    height: 27px;
-    width: 27px;
-    stroke: none;
-    fill: var(--white);
-    transition: transform .07s ease-out;
+.area > svg:hover{
+  transform: scaleY(1.27);
 }
-.area > div:active > .moreicon{
-    transform: translateX(9px);
+.r{
+  color: var(--blue);
+  font-size: 30px;
+  z-index: 999;
+}
+.v{
+  color: var(--purple);
+  font-size: 30px;
+  font-weight: 300;
 }
 @media screen and (max-width: 768px){
     .area{
@@ -34,11 +46,16 @@
         width: 100vw;
         opacity: .97;
     }
-    .area .logo{
-        height: 33px;
-        width: 33px;
+    .r, .v{
+      font-size: 26px;
     }
-    .area > div{
+    .area > svg{
         display: flex;
+    }
+    .area > svg:hover{
+      transform: initial;
+    }
+    .area > svg:active{
+      transform: scaleY(1.27);
     }
 }

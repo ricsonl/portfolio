@@ -11,8 +11,8 @@ const Resume = () => {
     return (
         <section>
             <div className="resume" ref={refsContext.resumeRef as RefObject<HTMLDivElement>}>
-                <h1>Resume (soon)</h1>
-                <svg style={{ fill: '#45a29e', height: '80px' }}><use xlinkHref={`#icon-build`}></use></svg>
+                <h2>Resume (soon)</h2>
+                <svg style={{ fill: '#45a29e', height: '70px', marginTop: '15px' }}><use xlinkHref={`#icon-build`}></use></svg>
             </div>
         </section>
     )

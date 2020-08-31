@@ -4,6 +4,7 @@
   --white: #c5c6c7;
   --grey: #1f2833;
   --dark-grey: #101318;
+  --light-grey: #202328;
   --black: #0b0c10;
 }
 
@@ -11,14 +12,14 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   color: var(--white);
 }
 
 body {
   width: 100%;
   height: 100%;
-  background: var(--grey);
+  background: var(--light-grey);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
