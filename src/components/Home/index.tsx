@@ -14,24 +14,24 @@ const Home = () => {
   const refsContext = useContext(RefsContext);
 
   useEffect(() => {
-    function handleScroll() {
-      setOffset(window.pageYOffset);
+    function handleScrollH() {
+      setOffset(window.pageYOffset * .4);
 
       const f = (window.screen.width > 450) ? .04 : .02;
       setLetterSpacing(3 + offset * f);
     }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScrollH);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScrollH);
     }
   }, [offset]);
 
   return (
     <section>
       <img src={notebook} className="notebook" alt="notebook" />
-      <div className="skew" style={{ backgroundPositionY: offset * .5 }}></div>
+      <div className="skew" style={{ backgroundPositionY: offset }}></div>
       <div className="home-content" ref={refsContext.homeRef as RefObject<HTMLDivElement>}>
         <div className="inner">
           <h1 className="spacing" style={{ letterSpacing: letterSpacing }}>

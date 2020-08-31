@@ -15,7 +15,7 @@
 }
 .skew{
   z-index: 500;
-  transform: skew(0, -6deg);
+  transform: skew(0, -7deg);
   position: absolute;
   top: -10vh;
   right: 0;
@@ -23,6 +23,7 @@
   width: calc(100vw - 75px);
   background: url("../../assets/home.png");
   background-size: cover;
+  background-position: center;
   opacity: .11;
 }
 .home-content .inner{
@@ -50,9 +51,6 @@
 @media screen and (max-width: 768px){
     .skew{
         width: 100vw;
-        background: url("../../assets/home.png");
-        background-size: cover;
-        background-position: center top;
     }
     .notebook{
       width: 230px;
