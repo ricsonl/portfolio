@@ -2,7 +2,7 @@ import React, { useContext, RefObject } from 'react';
 
 import RefsContext from '../../context/RefsContext';
 
-import './styles.css';
+import styles from './styles.module.css';
 
 const Projects = () => {
 
@@ -10,7 +10,7 @@ const Projects = () => {
 
     return (
         <section>
-            <div className="projects" ref={refsContext.projectsRef as RefObject<HTMLDivElement>}>
+            <div className={styles.projects} ref={refsContext.projectsRef as RefObject<HTMLDivElement>}>
                 <h2>Projects (soon)</h2>
                 <svg style={{ fill: '#45a29e', height: '70px', marginTop: '15px' }}><use xlinkHref={`#icon-build`}></use></svg>
             </div>

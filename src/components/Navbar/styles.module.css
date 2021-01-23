@@ -12,7 +12,7 @@
 .sidebar ~ *{
     margin-left: 75px;
 }
-.nav-links{
+.navLinks{
     background-color: var(--black);
     list-style: none;
     flex-grow: 1;
@@ -20,10 +20,10 @@
     flex-direction: column;
     height: 50%;
 }
-.nav-links > li, .social-links > li{
+.navLinks > li, .socialLinks > li{
     flex-grow: 1;
 }
-.social-links{
+.socialLinks{
     background-color: var(--dark-grey);
     list-style: none;
     display: flex;
@@ -32,14 +32,14 @@
 }
 
 @media screen and (max-width:768px){
-    .nav-links:not(.active), .social-links:not(.active){
+    .navLinks:not(.active), .socialLinks:not(.active){
         transform: translateX(-100%);
     }
-    .nav-links, .social-links{
+    .navLinks, .socialLinks{
         width: 100vw;
         transition: transform .2s ease-out;
     }
-    .social-links{
+    .socialLinks{
         flex-grow: .4;
         flex-direction: row;
     }

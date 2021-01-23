@@ -1,0 +1,23 @@
+.myListItem{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 12px;
+}
+
+.icon{
+  height: 30px;
+  width: 30px;
+  stroke: transparent;
+  fill: var(--blue);
+}
+
+.mainText{
+  margin-left: 15px;
+}
+
+.secText{
+  margin-left: 10px;
+  font-size: 12px;
+  opacity: .45;
+}

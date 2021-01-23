@@ -4,7 +4,7 @@ import RefsContext from '../../context/RefsContext';
 
 import notebook from '../../assets/notebook.svg';
 
-import './styles.css';
+import styles from './styles.module.css';
 
 const Home = () => {
 
@@ -30,17 +30,14 @@ const Home = () => {
 
   return (
     <section>
-      <img src={notebook} className="notebook" alt="notebook" />
-      <div className="skew" style={{ backgroundPositionY: offset }}></div>
-      <div className="home-content" ref={refsContext.homeRef as RefObject<HTMLDivElement>}>
-        <div className="inner">
-          <h1 className="spacing" style={{ letterSpacing: letterSpacing }}>
+      <img src={notebook} className={styles.notebook} alt="notebook" />
+      <div className={styles.skew} style={{ backgroundPositionY: offset }}></div>
+      <div className={styles.homeContent} ref={refsContext.homeRef as RefObject<HTMLDivElement>}>
+        <div className={styles.inner}>
+          <h1 className={styles.spacing} style={{ letterSpacing: letterSpacing }}>
             Ricson Vilaça
           </h1>
-          <p className="home-sub spacing" style={{ letterSpacing: letterSpacing }}>software developer</p>
-          <div className="home-more">
-
-          </div>
+          <p className={`${styles.homeSub} ${styles.spacing}`} style={{ letterSpacing: letterSpacing }}>software developer</p>
         </div>
       </div>
     </section>

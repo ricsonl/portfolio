@@ -1,4 +1,4 @@
-.home-content{
+.homeContent{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,7 @@
   background-position: center;
   opacity: .11;
 }
-.home-content .inner{
+.homeContent .inner{
   z-index: 501;
   position: absolute;
   display: flex;
@@ -38,11 +38,11 @@
     overflow: hidden;
     white-space: nowrap;
 }
-.home-content h1{
+.homeContent h1{
     font-size: 70px;
     font-weight: 400;
 }
-.home-sub{
+.homeSub{
     text-align: center;
     font-weight: 400;
     font-size: 35px;
@@ -56,26 +56,26 @@
       width: 230px;
       right: calc(50% - 115px);
     }
-    .home-content h1{
+    .homeContent h1{
         font-size: 50px;
     }
-    .home-tag{
+    .homeTag{
         font-size: 30px;
     }
-    .home-sub{
+    .homeSub{
         font-size: 25px;
     }
 }
 
 @media screen and (max-width: 450px){
-    .home-content h1{
+    .homeContent h1{
         font-size: 35px;
     }
-    .home-tag{
+    .homeTag{
         font-size: 22px;
         font-weight: 400;
     }
-    .home-sub{
+    .homeSub{
         font-size: 17px;
         font-weight: 400;
     }

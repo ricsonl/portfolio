@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import styles from './styles.module.css';
 
 const SocialButton = (props: any) => {
     const newTab = (url) => {
@@ -8,8 +8,8 @@ const SocialButton = (props: any) => {
     };
 
     return (
-        <button className="sb" onClick={() => newTab(props.href)}>
-            <svg className="icon"><use xlinkHref={`#${props.icon}`}></use></svg>
+        <button className={styles.sb} onClick={() => newTab(props.href)}>
+            <svg className={styles.icon}><use xlinkHref={`#${props.icon}`}></use></svg>
         </button>
     )
 }

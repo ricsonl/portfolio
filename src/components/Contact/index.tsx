@@ -4,7 +4,7 @@ import RefsContext from '../../context/RefsContext';
 
 import pc from '../../assets/pc.svg';
 
-import './styles.css';
+import styles from './styles.module.css';
 
 const Contact = () => {
 
@@ -13,8 +13,8 @@ const Contact = () => {
 
   useEffect(() => {
     function handleScrollC() {
-      if(window.pageYOffset > 170)
-        setOffset((window.pageYOffset - 170) * .4);
+      if(window.pageYOffset > 200)
+        setOffset((window.pageYOffset - 200) * .4);
     }
 
     window.addEventListener('scroll', handleScrollC);
@@ -25,15 +25,15 @@ const Contact = () => {
   }, [offset]);
 
   return (
-    <section className="contSec">
-      <div className="skewc" style={{ backgroundPositionY: offset }}></div>
-      <div className="contact" ref={refsContext.contactRef as RefObject<HTMLDivElement>}>
-        <div className="inner">
+    <section className={styles.contSec}>
+      <div className={styles.skewc} style={{ backgroundPositionY: offset }}></div>
+      <div className={styles.contact} ref={refsContext.contactRef as RefObject<HTMLDivElement>}>
+        <div className={styles.inner}>
           <h2>Contact (soon)</h2>
           <svg style={{ fill: '#45a29e', height: '70px', marginTop: '15px' }}><use xlinkHref={`#icon-build`}></use></svg>
         </div>
       </div>
-      <img src={pc} className="pc" alt="desktop" />
+      <img src={pc} className={styles.pc} alt="desktop" />
     </section>
   )
 }

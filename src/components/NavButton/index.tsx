@@ -1,12 +1,12 @@
 import React from 'react';
-import './styles.css';
+import styles from './styles.module.css';
 
 const NavButton = (props: any) => {
 
     return (
-        <button className="nb" onClick={props.onClick}>
+        <button className={styles.nb} onClick={props.onClick}>
             <div>
-                <svg className="icon"><use xlinkHref={`#${props.icon}`}></use></svg>
+                <svg className={styles.icon}><use xlinkHref={`#${props.icon}`}></use></svg>
                 <p>{props.text}</p>
             </div>
         </button>

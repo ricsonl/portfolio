@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './styles.css';
+import styles from './styles.module.css';
 
 import NavButton from '../NavButton';
 import SocialButton from '../SocialButton';
@@ -37,16 +37,16 @@ const Navbar = () => {
     };
 
     return (
-        <div className="sidebar">
+        <div className={styles.sidebar}>
 
             <Logo /*logo="svg-logo"*/ moreIcon="svg-subject" toggle={toggle}/>
 
-            <ul className="nav-links">
+            <ul className={styles.navLinks}>
                 <li>
                     <NavButton onClick={() => handleClick(refsContext.homeRef)} icon="svg-home" text="Home" toggle={toggle} />
                 </li>
                 <li>
-                    <NavButton onClick={() => handleClick(refsContext.resumeRef)} icon="svg-assignment_ind" text="Resume" toggle={toggle}/>
+                    <NavButton onClick={() => handleClick(refsContext.aboutRef)} icon="svg-assignment_ind" text="About" toggle={toggle}/>
                 </li>
                 <li>
                     <NavButton onClick={() => handleClick(refsContext.projectsRef)} icon="svg-code" text="Projects" toggle={toggle}/>
@@ -55,7 +55,7 @@ const Navbar = () => {
                     <NavButton onClick={() => handleClick(refsContext.contactRef)} icon="svg-forum" text="Contact" toggle={toggle}/>
                 </li>
             </ul>
-            <ul className="social-links">
+            <ul className={styles.socialLinks}>
                 <li>
                     <SocialButton icon="svg-github" href="https://github.com/ricsonl" />
                 </li>
