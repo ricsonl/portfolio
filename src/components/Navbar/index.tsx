@@ -18,19 +18,19 @@ const Navbar = () => {
     };
 
     const toggle = (both) => {
-        const navlinks = document.querySelector(".nav-links");
-        const sociallinks = document.querySelector(".social-links");
+        const navlinks = document.querySelector(`.${styles.navLinks}`);
+        const sociallinks = document.querySelector(`.${styles.socialLinks}`);
 
         if(navlinks && sociallinks){
             if(both){
-                navlinks.classList.toggle("active");
-                sociallinks.classList.toggle("active");
+                navlinks.classList.toggle(styles.active);
+                sociallinks.classList.toggle(styles.active);
                 return;
             }
-            if(navlinks.classList.contains("active"))
-                navlinks.classList.toggle("active");
-            if(sociallinks.classList.contains("active"))
-                sociallinks.classList.toggle("active");
+            if(navlinks.classList.contains(styles.active))
+                navlinks.classList.toggle(styles.active);
+            if(sociallinks.classList.contains(styles.active))
+                sociallinks.classList.toggle(styles.active);
             return;
         }
         return;
