@@ -29,6 +29,7 @@
   background-image: url("../../assets/contact_mobile.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: .4;
 }
 .contact .inner{

@@ -24,8 +24,8 @@ class App extends Component {
       <I18nProvider locale={this.state.locale}>
         <Navbar />
         <select onChange={this.setLocale} className="langSelect">
-          <option value={LOCALES.PORTUGUESE} className="langOpt">Português</option>
-          <option value={LOCALES.ENGLISH} className="langOpt">English</option>
+          <option value={LOCALES.PORTUGUESE} className="langOpt">PT</option>
+          <option value={LOCALES.ENGLISH} className="langOpt">EN</option>
         </select>
         <Home />
         <About />

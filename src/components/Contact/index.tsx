@@ -14,8 +14,7 @@ const Contact = () => {
 
   useEffect(() => {
     function handleScrollC() {
-      if(window.pageYOffset > 200)
-        setOffset((window.pageYOffset - 200) * .4);
+      setOffset((document.body.scrollHeight - window.innerHeight - window.pageYOffset) * -.4);
     }
 
     window.addEventListener('scroll', handleScrollC);

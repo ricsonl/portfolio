@@ -1,6 +1,6 @@
 .container{
   width: 90%;
-  margin: 100px auto;
+  margin: 90px auto;
   display: grid;
   grid-column-gap: 25px;
   grid-row-gap: 50px;
@@ -47,7 +47,7 @@
 @media screen and (max-width: 768px){
   .container{
     width: 80%;
-    margin: 30px auto;
+    margin: 55px auto;
     grid-template-areas: 
       'pp pp inter inter'
       'basic basic txt txt'
@@ -65,7 +65,7 @@
 @media screen and (max-width: 450px){
   .container{
     width: 80%;
-    margin: 30px auto;
+    margin: 45px auto;
     grid-template-areas: 
       'pp'
       'basic'
