@@ -6,6 +6,7 @@ import SocialButton from '../SocialButton';
 import Logo from '../Logo';
 
 import RefsContext from '../../context/RefsContext';
+import { FormattedMessage } from 'react-intl';
 
 const Navbar = () => {
 
@@ -43,16 +44,16 @@ const Navbar = () => {
 
             <ul className={styles.navLinks}>
                 <li>
-                    <NavButton onClick={() => handleClick(refsContext.homeRef)} icon="svg-home" text="Home" toggle={toggle} />
+                    <NavButton onClick={() => handleClick(refsContext.homeRef)} icon="svg-home" text={<FormattedMessage id="home"/>} toggle={toggle} />
                 </li>
                 <li>
-                    <NavButton onClick={() => handleClick(refsContext.aboutRef)} icon="svg-assignment_ind" text="About" toggle={toggle}/>
+                    <NavButton onClick={() => handleClick(refsContext.aboutRef)} icon="svg-assignment_ind" text={<FormattedMessage id="about"/>} toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton onClick={() => handleClick(refsContext.projectsRef)} icon="svg-code" text="Projects" toggle={toggle}/>
+                    <NavButton onClick={() => handleClick(refsContext.projectsRef)} icon="svg-code" text={<FormattedMessage id="projects"/>} toggle={toggle}/>
                 </li>
                 <li>
-                    <NavButton onClick={() => handleClick(refsContext.contactRef)} icon="svg-forum" text="Contact" toggle={toggle}/>
+                    <NavButton onClick={() => handleClick(refsContext.contactRef)} icon="svg-forum" text={<FormattedMessage id="contact"/>} toggle={toggle}/>
                 </li>
             </ul>
             <ul className={styles.socialLinks}>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext, RefObject } from 'react';
 
 import RefsContext from '../../context/RefsContext';
+import { FormattedMessage } from 'react-intl';
 
 import notebook from '../../assets/notebook.svg';
 
@@ -37,7 +38,7 @@ const Home = () => {
           <h1 className={styles.spacing} style={{ letterSpacing: letterSpacing }}>
             Ricson Vilaça
           </h1>
-          <p className={`${styles.homeSub} ${styles.spacing}`} style={{ letterSpacing: letterSpacing }}>software developer</p>
+          <p className={`${styles.homeSub} ${styles.spacing}`} style={{ letterSpacing: letterSpacing }}><FormattedMessage id="dev"/></p>
         </div>
       </div>
     </section>
